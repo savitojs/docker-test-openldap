@@ -1,4 +1,7 @@
 #!/usr/bin/with-contenv bash
 
 echo "starting slapd"
-/usr/sbin/slapd -h "ldapi:/// ldap://0.0.0.0:10389 ldaps://0.0.0.0:10636" -d 256
+/usr/sbin/slapd -h "ldapi:/// ldap://0.0.0.0:10389 ldaps://0.0.0.0:10636" -d 256 -u openldap -g openldap
+
+echo "Removing lock file..."
+rm /var/lib/ldap/alock

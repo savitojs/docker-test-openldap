@@ -29,7 +29,7 @@ ADD https://github.com/just-containers/s6-overlay/releases/download/v2.2.0.1/s6-
 RUN chmod +x /tmp/s6-overlay-amd64-installer && /tmp/s6-overlay-amd64-installer /
 
 # ADD rootfs files
-ADD ./rootfs /
+COPY ./rootfs /
 
 VOLUME ["/etc/ldap/slapd.d", "/etc/ldap/ssl", "/var/lib/ldap", "/run/slapd"]
 

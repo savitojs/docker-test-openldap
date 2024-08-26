@@ -6,11 +6,11 @@ services:
         # use the image tag to pull directly from the repo
         # image: rroemhild/test-openldap
         environment:
-            LDAP_FORCE_STARTTLS: "true"
-            LDAP_DOMAIN: "customdomain.com"
-            LDAP_BASEDN: "dc=customdomain,dc=com"
-            LDAP_ORGANISATION: "Custom Domain, Inc."
-            LDAP_BINDDN: "cn=admin,dc=customdomain,dc=com"
+            LDAP_FORCE_STARTTLS: "false"
+            LDAP_DOMAIN: "sav.com"
+            LDAP_BASEDN: "dc=sav,dc=com"
+            LDAP_ORGANISATION: "SavN, Inc."
+            LDAP_BINDDN: "cn=admin,dc=sav,dc=com"
         # use build tag to use the local repo
         build:
             context: ./
